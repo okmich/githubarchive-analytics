@@ -1,0 +1,24 @@
+# running the crawler with a mysql database using github_username as an entry to the github network
+java -jar target/github-crawler-1.0-SNAPSHOT.jar -refuser=github_username -dbtype=mysql
+
+# running the crawler with a hbase database using github_username as an entry to the github network
+java -jar target/github-crawler-1.0-SNAPSHOT.jar -refuser=github_username -dbtype=hbase
+
+# running the crawler after a restart
+java -jar target/github-crawler-1.0-SNAPSHOT.jar -dbtype=hbase/mysql/mock
+
+
+
+spark-shell --packages graphframes:graphframes:0.5.0-spark1.6-s_2.10
+libraryDependencies += "graphframes" % "graphframes" % "0.5.0-spark1.6-s_2.10"
+
+spark-shell --packages it.nerdammer.bigdata:spark-hbase-connector_2.10:1.0.3 --exclude-packages org.slf4j:slf4j-api
+
+spark-shell --packages graphframes:graphframes:0.5.0-spark1.6-s_2.10
+
+
+"mysql" % "mysql-connector-java" % "5.1.24"
+
+
+
+0c2511c7a96ed8aad8b441cc14ba3db628129bf5

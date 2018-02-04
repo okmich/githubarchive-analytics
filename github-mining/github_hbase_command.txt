@@ -1,0 +1,7 @@
+# create the hbase namespace for all your tables
+create_namespace 'github' 
+
+# create three tables in the github namespace
+create 'github:user','u'
+create 'github:user_network', 'main'
+create 'github:user_visit_log', 'log'
